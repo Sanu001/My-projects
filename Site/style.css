@@ -1,0 +1,119 @@
+:root {
+  --main-color: #800000;
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --header-bg: #800000;
+  --footer-bg: #222;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --header-bg: #000000;
+  --footer-bg: #111;
+}
+
+header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#toggle-theme {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#toggle-theme:hover {
+  background: #dddddd;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dark-mode section {
+  background: #1e1e1e;
+}
+
+h2 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #a00000;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
