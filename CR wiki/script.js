@@ -1,34 +1,33 @@
-// --- 1. NAVIGATION LOGIC ---
-// This must stay at the top to ensure links always work
+
 function showPage(pageId) {
-    // Hide all pages
+   
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
 
-    // Show the selected page
+   
     const targetPage = document.getElementById(pageId);
     if (targetPage) {
         targetPage.classList.add('active');
     }
 }
 
-// --- 2. CARD DATA & API LOGIC ---
+
 async function fetchAllCards() {
     const cardList = document.getElementById('card-list');
     const favSelect = document.getElementById('fav-card-select');
 
-    // Safety Check: If we aren't on the Cards or Profile page, don't run this
+  
     if (!cardList && !favSelect) return;
 
     try {
         const response = await fetch('https://royaleapi.github.io/cr-api-data/json/cards.json');
         const cardsData = await response.json();
 
-        // Clear placeholders if they exist
+       
         if (cardList) cardList.innerHTML = "";
 
         cardsData.forEach(card => {
-            // Add to Cards Page Grid
+           
             if (cardList) {
                 const div = document.createElement('div');
                 div.className = 'card-item';
@@ -49,7 +48,7 @@ async function fetchAllCards() {
                 cardList.appendChild(div);
             }
 
-            // Add to Profile Dropdown
+           
             if (favSelect) {
                 const opt = document.createElement('option');
                 opt.value = card.key;
@@ -62,7 +61,7 @@ async function fetchAllCards() {
     }
 }
 
-// --- 3. MODAL LOGIC ---
+
 function showCardDetails(card) {
     const modal = document.getElementById('card-modal');
     const body = document.getElementById('modal-body');
@@ -86,7 +85,7 @@ function closeModal() {
     if (modal) modal.style.display = "none";
 }
 
-// Close modal if user clicks outside of the content
+
 window.onclick = function (event) {
     const modal = document.getElementById('card-modal');
     if (event.target == modal) {
@@ -94,7 +93,7 @@ window.onclick = function (event) {
     }
 }
 
-// --- 4. FORM LOGIC ---
+
 const signupForm = document.getElementById('signup-form');
 if (signupForm) {
     signupForm.onsubmit = (e) => {
@@ -104,6 +103,5 @@ if (signupForm) {
     };
 }
 
-// --- 5. INITIALIZE ---
-// Run the fetch when the script loads
+
 fetchAllCards();
