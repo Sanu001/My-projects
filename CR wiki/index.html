@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royale Wiki | Master the Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Royale Wiki</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('cards')">Cards</a></li>
+                <li><a href="#" onclick="showPage('signup')">Sign Up</a></li>
+                <li class="profile-item" onclick="showPage('profile')">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor"
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content-area">
+        <section id="home" class="page active">
+            <div class="hero">
+                <img src="https://i.redd.it/dff5z37aniu71.jpg" alt="Clash Royale Arena">
+                <h1>Welcome to the Arena</h1>
+                <p>Clash Royale is a real-time strategy game where players collect and upgrade dozens of cards featuring
+                    the Clash of Clans troops, spells, and defenses you know and love.</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <img src="https://c7.alamy.com/comp/FNDF2C/winning-a-match-in-the-arena-of-clash-royale-FNDF2C.jpg"
+                        alt="Strategy">
+                    <h3>Tower Defense</h3>
+                    <p>Knock the enemy King and Princesses from their towers to defeat your opponents and win trophies.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpb_FqJ5LrQC_LulbTLt9yAx2z8C41J3DgSg&s"
+                        alt="Trophies">
+                    <h3>Epic Rewards</h3>
+                    <p>Earn chests to unlock rewards, collect powerful new cards and upgrade existing ones.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page">
+            <h2>About Royale Wiki</h2>
+            <div class="about-content">
+                <p>Royale Wiki is a fan-made project dedicated to providing the most accurate and up-to-date information
+                    for players looking to climb the ladder. Our mission is to help every player, from Arena 1 beginners
+                    to Ultimate Champions, understand card mechanics and meta-strategies.</p>
+                <p>Whether you are looking for the hitpoints of a P.E.K.K.A or the travel speed of a Log, we have you
+                    covered.</p>
+            </div>
+        </section>
+
+        <section id="cards" class="page">
+            <h2>Card Collection</h2>
+            <div class="card-grid" id="card-list">
+            </div>
+        </section>
+
+        <section id="signup" class="page">
+            <div class="form-container">
+                <h2>Join the Clan</h2>
+                <form id="signup-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn-main">Create Account</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="profile" class="page">
+            <h2>Player Profile</h2>
+            <div class="profile-settings">
+                <div class="setting-group">
+                    <label for="lang-select">Preferred Language:</label>
+                    <select id="lang-select">
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>Hindi</option>
+                        <option>French</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label for="fav-card-select">Favorite Card:</label>
+                    <select id="fav-card-select">
+                    </select>
+                </div>
+                <button class="btn-main" onclick="alert('Profile Updated!')">Save Changes</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="card-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
