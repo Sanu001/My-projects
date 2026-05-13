@@ -1,0 +1,474 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaeded;
+  margin: 0;
+}
+
+.logo a {
+  color: rgb(60, 60, 164);
+  margin: 0 0 0 20px;
+  padding: 0 0 0 20px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: transform 0.5s ease;
+}
+
+.logo :hover {
+  color: rgb(35, 0, 158);
+}
+
+.amazon-nav {
+  background-color: white;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 0 20px 200px;
+  gap: 100px;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-size: 20px;
+
+}
+
+.search-container input {
+  width: 500px;
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+}
+
+.search-btn {
+  background-color: #fdfdfd;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-size: 15px;
+}
+
+.btn-signin {
+  text-decoration: none;
+  background-color: #ff4757;
+  color: rgb(232, 228, 228);
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.btn-signin:hover {
+  transform: translateX(-2px);
+  background-color: #e84118;
+}
+
+
+.btn-profile {
+  text-decoration: none;
+  background-color: #f0f0f0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.btn-profile span {
+  display: none;
+}
+
+.btn-profile:hover {
+  background-color: #333;
+  color: white;
+}
+
+.cart-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+/* Container for Icon + Badge */
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* The "0" Badge */
+#cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #ff4757; /* Your BiZZ Pink */
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  height: 18px;
+  min-width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white; /* Essential for that modern "floating" look */
+  box-shadow: 0 3px 6px rgba(255, 71, 87, 0.2);
+}
+
+.cart-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #777;
+  display: block;
+}
+
+/* --- HOVER EFFECTS --- */
+.cart-action:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-2px);
+}
+
+.cart-action:hover svg {
+  color: #ff4757;
+  transform: scale(1.1);
+}
+
+.cart-action:hover .cart-label {
+  color: #333;
+}
+
+/* Section Styling */
+.recommendations {
+  padding: 60px 0;
+  background-color: #fff; /* White background makes products pop */
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: #ff4757; /* Your BiZZ pink */
+  margin: 0 auto 15px;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: #777;
+  font-size: 14px;
+}
+
+/* The Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+/* THE PRODUCT CARD */
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #f0f0f0;
+}
+
+/* Card Hover State */
+.product-card:hover {
+  transform: translateY(-10px); /* Lifts the card */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  border-color: transparent;
+}
+
+/* Image Container */
+.product-image-wrapper {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Important for clean look */
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Content Details */
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.product-price {
+  color: #ff4757;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/* The Button inside the card */
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #ff4757;
+}
+
+.sections {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0 0 400px;
+}
+
+.sections ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Link styling */
+.sections a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.sections a:hover {
+  color: #ff4757;
+}
+
+.hero-banner {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.banner-container {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  min-height: 300px;
+}
+
+.banner-content {
+  padding: 40px 60px;
+  flex: 1;
+}
+
+.subtitle {
+  color: #ff4757;
+  /* The pink accent color */
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #222;
+  font-size: 42px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.price-tag {
+  color: #777;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.price-tag span {
+  font-weight: 800;
+  color: #333;
+}
+
+.shop-btn {
+  display: inline-block;
+  background-color: #ff4757;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #333;
+}
+
+/* Image styling */
+.banner-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 15% 75%, 3% 50%, 15% 25%, 0 0);
+  height: 100%;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-content {
+    padding: 30px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+#card-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+
+  animation: fadeIn 0.3s ease-out;
+
+
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

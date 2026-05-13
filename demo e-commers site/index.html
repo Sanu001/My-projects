@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="amazon-nav">
+      <div class="logo">
+        <a href="index.html">BiZZ</a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search products...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+
+      <div class="nav-links">
+        <a href="#" class="btn-signin">Sign In</a>
+
+        <a href="#" class="btn-profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+          <span>Profile</span>
+        </a>
+      </div>
+
+      <a href="#" class="cart-action">
+        <div class="cart-icon-container">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span id="cart-count">0</span>
+        </div>
+        <div class="cart-info">
+          <span class="cart-label">Your Cart</span>
+        </div>
+      </a>
+    </nav>
+  </header>
+
+  <nav>
+    <div class="sections">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Electronics.html">Electronics</a></li>
+        <li><a href="Clothes.html">Clothes</a></li>
+        <li><a href="Offers.html">Offers</a></li>
+        <li><a href="Men's.html">Men's</a></li>
+        <li><a href="Women's.html">Women's</a></li>
+        <li><a href="Categories.html">Categories</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero-banner">
+    <div class="banner-container">
+
+      <div class="banner-content">
+        <p class="subtitle">Trending Accessories</p>
+        <h2 class="title">Modern <br> Sunglasses</h2>
+        <p class="price-tag">starting at $ <span>3</span>.00</p>
+        <a href="#" class="shop-btn">Shop Now</a>
+      </div>
+
+      <div class="banner-image">
+        <img src="https://fashionsuggest.in/wp-content/uploads/2018/04/sunglasses-women-banner-compressed.jpg"
+          alt="Modern Sunglasses">
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <main>
+    <section class="recommendations">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Recommended For You</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">Handpicked styles just for your unique taste.</p>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+<a href="product-detail.html?id=101"> ... </a>
+
+<script src="script.js"></script>
+
+</html>
